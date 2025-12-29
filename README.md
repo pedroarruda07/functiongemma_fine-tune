@@ -40,7 +40,7 @@ The goal was not to redesign the training pipeline, but to **make it more access
 
 ## Notebooks
 
-- **Main notebook:** [finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb](finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb)
+- **Main notebook (Colab):** [colab-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb](colab-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb)
 - **Original Google notebook:** [gemma-cookbook/FunctionGemma](https://github.com/google-gemini/gemma-cookbook/blob/main/FunctionGemma/%5BFunctionGemma%5DFinetune_FunctionGemma_270M_for_Mobile_Actions_with_Hugging_Face.ipynb)
 
 The notebook walks through:
@@ -51,7 +51,7 @@ The notebook walks through:
 5. Evaluation and checkpoint saving  
 6. Conversion to `.litertlm` for edge deployment  
 
-**Note:** This notebook can be easily adapted to run on Kaggle by adjusting the output paths and the logic used to load secrets. Kaggle provides up to **30 hours of GPU time per week**, which avoids dependence on a single long-lived Colab runtime for completing the full training run.
+**Note:** A Kaggle-ready version of this notebook is also available in [kaggle-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb](kaggle-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb). It can be uploaded and run directly on Kaggle, which provides up to **30 hours of GPU time per week** and avoids reliance on a single long-lived Colab runtime for completing the full training run.
 
 ---
 
@@ -111,12 +111,11 @@ For reference, the original notebook required an A100 GPU and paid Colab resourc
 
 The notebook includes a step to convert the trained checkpoint into a **`.litertlm`** file.
 
-This file can be:
-1. Downloaded
-2. Uploaded directly to **Edge Gallery**
-3. Run on supported edge devices without additional conversion
+You can also download it directly from [Hugging Face](https://huggingface.co/pmarruda/functiongemma-270m-mobile-actions-litertlm-lora)
 
-This makes the project suitable for experimentation in mobile and edge AI scenarios.
+This file can be:
+1. Uploaded directly to **Edge Gallery** in the 'Mobile Actions' section
+2. Run on supported edge devices without additional conversion
 
 ---
 
