@@ -26,8 +26,7 @@ full fine-tuning setup.
 
 ##
 
-The original notebook fine-tunes <b>FunctionGemma 270M</b> for mapping user requests to structured mobile actions.  
-It follows a traditional full fine-tuning recipe that requires an <b>A100 GPU</b>, which means it requires paid Google Colab resources.
+The original notebook follows a traditional full fine-tuning recipe that requires an <b>A100 GPU</b>, which means it requires paid Google Colab resources.
 
 This project adapts that notebook to:
 
@@ -36,7 +35,6 @@ This project adapts that notebook to:
   <li>Optionally support <b>QLoRA</b> for further memory reduction</li>
   <li>Run on a <b>single NVIDIA T4 GPU</b></li>
   <li>Be <b>free to run</b> on standard Google Colab or Kaggle GPU sessions</li>
-  <li>Preserve the original training logic and evaluation flow</li>
 </ul>
 <br>
 
@@ -45,7 +43,7 @@ This project adapts that notebook to:
       
   ## Demo in Edge Gallery
       
-  <img src="assets/MobileActions_LoRA_Demo.gif" alt="Demo Gif" width="310">
+  <img src="assets/MobileActions_LoRA_Demo.gif" alt="Demo Gif" width="300">
   </td>
   </tr>
 </table>
