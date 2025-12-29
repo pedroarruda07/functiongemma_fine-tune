@@ -1,6 +1,6 @@
 # LoRA Fine-Tuning FunctionGemma 270M for Mobile Actions
 
-This repository contains an adapted version of the original FunctionGemma 270M Mobile Actions fine-tuning notebook from Google.  
+This repository contains an adapted version of the original FunctionGemma 270M Mobile Actions fine-tuning [notebook](https://github.com/google-gemini/gemma-cookbook/blob/main/FunctionGemma/%5BFunctionGemma%5DFinetune_FunctionGemma_270M_for_Mobile_Actions_with_Hugging_Face.ipynb) from Google.  
 The main goal of this project is to demonstrate how **LoRA (Low-Rank Adaptation)** and optional **QLoRA** can be used to significantly reduce hardware requirements while achieving performance very close to the original full fine-tuning setup.
 
 ##
@@ -30,7 +30,7 @@ This project adapts that notebook to:
 |------|------------------|-----------------|
 | Fine-tuning method | Full fine-tuning | LoRA (optional QLoRA) |
 | GPU requirement | A100 | Single T4 |
-| Colab cost | Paid | Typically free |
+| Cost | Paid (~11$ for Colab units) | Free |
 | Training time | ~60 minutes | 3-4 hours |
 | Performance | Baseline | Very similar ([Detailed Here](#training-results)) |
 
@@ -40,10 +40,18 @@ The goal was not to redesign the training pipeline, but to **make it more access
 
 ## Notebooks
 
-- **Main notebook (Colab):** [colab-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb](colab-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb)
-- **Original Google notebook:** [gemma-cookbook/FunctionGemma](https://github.com/google-gemini/gemma-cookbook/blob/main/FunctionGemma/%5BFunctionGemma%5DFinetune_FunctionGemma_270M_for_Mobile_Actions_with_Hugging_Face.ipynb)
+This project provides **two equivalent notebooks** in the [/notebooks](./notebooks) directory, adapted for different execution environments:
 
-The notebook walks through:
+- <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" alt="Colab" width="20"/> **Google Colab notebook**  
+  [colab-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb](./notebooks/colab-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb)  
+  Includes Colab-specific paths and secret handling.
+
+- <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" alt="Kaggle" width="20"/> **Kaggle notebook**  
+  [kaggle-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb](./notebooks/kaggle-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb)  
+  Ready to run on Kaggle, which provides up to **30 hours of GPU time per week** and avoids reliance on a single long-lived Colab runtime.
+
+Both notebooks walk through the same training and evaluation flow:
+
 1. Environment setup  
 2. Dataset preparation  
 3. Baseline model loading and testing  
@@ -51,7 +59,8 @@ The notebook walks through:
 5. Evaluation and checkpoint saving  
 6. Conversion to `.litertlm` for edge deployment  
 
-**Note:** A Kaggle-ready version of this notebook is also available in [kaggle-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb](kaggle-finetune_functiongemma_270m_for_mobile_actions_with_LoRA.ipynb). It can be uploaded and run directly on Kaggle, which provides up to **30 hours of GPU time per week** and avoids reliance on a single long-lived Colab runtime for completing the full training run.
+The original Google notebook can be found in: 
+[gemma-cookbook/FunctionGemma](https://github.com/google-gemini/gemma-cookbook/blob/main/FunctionGemma/%5BFunctionGemma%5DFinetune_FunctionGemma_270M_for_Mobile_Actions_with_Hugging_Face.ipynb)
 
 ---
 
