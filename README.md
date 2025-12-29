@@ -45,7 +45,7 @@ This project adapts that notebook to:
       
   ## Demo in Edge Gallery
       
-  <img src="assets/MobileActions_LoRA_Demo.gif" alt="Demo Gif" width="310">
+  <img src="assets/MobileActions_LoRA_Demo.gif" alt="Demo Gif" width="250">
   </td>
   </tr>
 </table>
