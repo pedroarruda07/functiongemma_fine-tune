@@ -1,26 +1,54 @@
 # LoRA Fine-Tuning FunctionGemma 270M for Mobile Actions
 
-This repository contains an adapted version of the original FunctionGemma 270M Mobile Actions fine-tuning [notebook](https://github.com/google-gemini/gemma-cookbook/blob/main/FunctionGemma/%5BFunctionGemma%5DFinetune_FunctionGemma_270M_for_Mobile_Actions_with_Hugging_Face.ipynb) from Google.  
-The main goal of this project is to demonstrate how **LoRA (Low-Rank Adaptation)** and optional **QLoRA** can be used to significantly reduce hardware requirements while achieving performance very close to the original full fine-tuning setup.
-
-##
-🤗 **Try it on Hugging Face:** Download the model or grab the `.litertlm` file and run it directly in Edge Gallery: 
-
-[![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model%20Card-yellow)](https://huggingface.co/pmarruda/functiongemma-270m-mobile-actions-litertlm-lora)
-
----
+<table>
+  <tr>
+    <td valign="top">
 
 ## Overview
 
-The original notebook fine-tunes **FunctionGemma 270M** for mapping user requests to structured mobile actions.  
-It follows a traditional full fine-tuning recipe that requires an **A100 GPU**, which means it requires paid Google Colab resources.
+This repository contains an adapted version of the original FunctionGemma 270M Mobile Actions fine-tuning
+<a href="https://github.com/google-gemini/gemma-cookbook/blob/main/FunctionGemma/%5BFunctionGemma%5DFinetune_FunctionGemma_270M_for_Mobile_Actions_with_Hugging_Face.ipynb">notebook</a>
+from Google.
+
+<br>
+
+The main goal of this project is to demonstrate how <b>LoRA (Low-Rank Adaptation)</b> and optional <b>QLoRA</b>
+can be used to significantly reduce hardware requirements while achieving performance very close to the original
+full fine-tuning setup.
+
+<br>
+
+🤗 <b>Try it on Hugging Face:</b> Download the model or grab the <code>.litertlm</code> file and run it directly in Edge Gallery: 
+
+<a href="https://huggingface.co/pmarruda/functiongemma-270m-mobile-actions-litertlm-lora">
+  <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Model%20Card-yellow" alt="Hugging Face">
+</a>
+
+##
+
+The original notebook fine-tunes <b>FunctionGemma 270M</b> for mapping user requests to structured mobile actions.  
+It follows a traditional full fine-tuning recipe that requires an <b>A100 GPU</b>, which means it requires paid Google Colab resources.
 
 This project adapts that notebook to:
-- Use **LoRA adapters** instead of full fine-tuning
-- Optionally support **QLoRA** for further memory reduction
-- Run on a **single NVIDIA T4 GPU**
-- Be **free to run** on standard Google Colab or Kaggle GPU sessions
-- Preserve the original training logic and evaluation flow
+
+<ul>
+  <li>Use <b>LoRA adapters</b> instead of full fine-tuning</li>
+  <li>Optionally support <b>QLoRA</b> for further memory reduction</li>
+  <li>Run on a <b>single NVIDIA T4 GPU</b></li>
+  <li>Be <b>free to run</b> on standard Google Colab or Kaggle GPU sessions</li>
+  <li>Preserve the original training logic and evaluation flow</li>
+</ul>
+<br>
+
+  </td>
+    <td width="270" align="left" valign="top">
+      
+  ## Demo in Edge Gallery
+      
+  <img src="assets/MobileActions_LoRA_Demo.gif" alt="Demo Gif" width="310">
+  </td>
+  </tr>
+</table>
 
 ---
 
